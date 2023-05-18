@@ -7,7 +7,7 @@ using TaskManagemnt.Domain.Common;
 
 namespace TaskManagemnt.Domain
 {
-    internal class User: BaseDomainEntity
+    public class User: BaseDomainEntity
     {
         public string Email { get; set; }
         public string Password { get; set; }

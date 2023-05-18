@@ -7,7 +7,7 @@ using TaskManagemnt.Domain.Common;
 
 namespace TaskManagemnt.Domain
 {
-    internal class Checklist: BaseDomainEntity
+    public class Checklist: BaseDomainEntity
     {
         public _Task Task { get; set; }
         public int TaskId { get; set; }

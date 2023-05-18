@@ -7,7 +7,7 @@ using TaskManagemnt.Domain.Common;
 
 namespace TaskManagemnt.Domain
 {
-    internal class _Task: BaseDomainEntity
+    public class _Task: BaseDomainEntity
     {
         public User Owner { get; set; }
         public string Title { get; set; }
