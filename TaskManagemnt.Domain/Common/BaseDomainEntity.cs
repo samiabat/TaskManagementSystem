@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TaskManagemnt.Domain.Common
 {
-    internal class BaseDomainEntity
+    public class BaseDomainEntity
     {
         public int Id { get; set; }
     }

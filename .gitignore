@@ -1,4 +1,8 @@
 /TaskManagement/bin 
 /TaskManagement/obj 
-/TaskManagemnt.Doman/bin 
-/TaskManagemnt.Doman/obj
+/TaskManagment.Application/bin
+/TaskManagment.Application/obj
+/TaskManagement.Persistence/bin
+/TaskManagement.Persistence/obj
+/TaskManagemnt.Domain/bin
+/TaskManagemnt.Domain/obj
