@@ -16,6 +16,7 @@ namespace TaskManagement.Persistence.Configerations.Entities
             builder.HasData(
                 new User
                 {
+                    Id = 2,
                     Email = "samuel@gmail.com",
                     Password = "Samuel",
                     FullName = "Samuel Abatneh",

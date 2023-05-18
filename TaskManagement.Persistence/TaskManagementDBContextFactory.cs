@@ -21,7 +21,7 @@ namespace TaskManagement.Persistence
 
             var builder = new DbContextOptionsBuilder<TaskManagementDBContext>();
             var connectionString = configurationRoot.GetConnectionString("TaskManagementConnectionString");
-            builder.UseSqlServer(connectionString);
+            builder.UseNpgsql(connectionString);
 
             return new TaskManagementDBContext(builder.Options);
         }

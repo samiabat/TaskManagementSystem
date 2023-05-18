@@ -15,7 +15,7 @@ namespace TaskManagement.Persistence
     {
         public static IServiceCollection ConfigurePersistenceService(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddDbContext<TaskManagementDBContext>(options => options.UseSqlServer(
+            services.AddDbContext<TaskManagementDBContext>(options => options.UseNpgsql(
                 configuration.GetConnectionString("TaskManagementConnectionString")
                 ));
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepositiory<>));

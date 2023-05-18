@@ -36,19 +36,6 @@ namespace TaskManagement.Persistence
             return base.SaveChangesAsync(cancellationToken);
         }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            if (!optionsBuilder.IsConfigured)
-            {
-                IConfigurationRoot configurationRoot = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.json")
-                .Build();
-                optionsBuilder.UseSqlServer(configurationRoot.GetConnectionString("TaskManagementConnectionString"),
-                    options => options.MigrationsAssembly(typeof(TaskManagementDBContext).Assembly.FullName));
-            }
-        }
-
         public DbSet<_Task> Tasks { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Checklist> Checklists { get; set; }
