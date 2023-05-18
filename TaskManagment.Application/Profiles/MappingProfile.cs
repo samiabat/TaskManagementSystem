@@ -8,7 +8,7 @@ using TaskManagment.Application.Features.Tasks.DTO;
 
 namespace TaskManagement.Application.Profiles
 {
-    class MappingProfile: Profile
+    public class MappingProfile: Profile
     {
         public MappingProfile() {
             CreateMap<User, UserDTO>().ReverseMap();

@@ -9,7 +9,7 @@ using TaskManagment.Application.Features.Tasks.DTO;
 
 namespace TaskManagement.Application.Features.Tasks.DTO
 {
-    public class CreateTaskDTO: CommenDTO, ITaskDTO
+    public class CreateTaskDTO: CommonDTO, ITaskDTO
     {
         public int Id { get; set; }
         public User Owner { get; set; }
