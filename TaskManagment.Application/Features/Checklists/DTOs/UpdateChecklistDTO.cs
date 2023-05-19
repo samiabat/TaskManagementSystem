@@ -8,7 +8,7 @@ using TaskManagment.Application.Features.Checklists.DTOs;
 
 namespace TaskManagement.Application.Features.Checklists.DTOs
 {
-    public class UpdateChecklistDTO: CommenDTO, IChecklistDTO
+    public class UpdateChecklistDTO: CommonDTO, IChecklistDTO
     {
         public int Id { get; set; }
     }

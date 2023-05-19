@@ -33,9 +33,6 @@ namespace TaskManagement.API.Controllers
 
 
         [HttpPost]
-        [ProducesResponseType(201)]
-        [ProducesResponseType(400)]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<ActionResult> Post(CreateUserCommand user)
         {
             var response = await _mediator.Send(user);
@@ -43,10 +40,6 @@ namespace TaskManagement.API.Controllers
         }
 
         [HttpPut]
-        [ProducesResponseType(StatusCodes.Status204NoContent)]
-        [ProducesResponseType(400)]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
-        [ProducesDefaultResponseType]
         public async Task<ActionResult> Put(UpdateUserCommand user)
         {
             await _mediator.Send(user);
@@ -54,9 +47,6 @@ namespace TaskManagement.API.Controllers
         }
 
         [HttpDelete("{id}")]
-        [ProducesResponseType(StatusCodes.Status204NoContent)]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
-        [ProducesDefaultResponseType]
         public async Task<ActionResult> Delete(int id)
         {
             var command = new DeleteUserCommand { Id = id };
