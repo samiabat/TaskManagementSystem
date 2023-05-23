@@ -6,7 +6,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TaskManagemnt.Domain;
-using TaskManagemnt.Domain.Common;
 
 namespace TaskManagement.Persistence
 {

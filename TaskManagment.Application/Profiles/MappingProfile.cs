@@ -5,6 +5,8 @@ using TaskManagement.Application.Features.Users.DTOs;
 using TaskManagemnt.Domain;
 using TaskManagment.Application.Features.Checklists.DTOs;
 using TaskManagment.Application.Features.Tasks.DTO;
+using TaskManagment.Application.Features.Users.DTOs;
+using TaskManagment.Application.Models.Identity;
 
 namespace TaskManagement.Application.Profiles
 {
@@ -15,6 +17,8 @@ namespace TaskManagement.Application.Profiles
             CreateMap<User, CreateUserDTO>().ReverseMap();
             CreateMap<User, UpdateUserDTO>().ReverseMap();
             CreateMap<User, DeleteUserDTO>().ReverseMap();
+            CreateMap<RegisterDTO, CreateUserDTO>().ReverseMap();
+            CreateMap<RegisterDTO, RegisterModel>().ReverseMap();
 
             CreateMap<_Task, CreateTaskDTO>().ReverseMap();
             CreateMap<_Task, UpdateTaskDTO>().ReverseMap();
