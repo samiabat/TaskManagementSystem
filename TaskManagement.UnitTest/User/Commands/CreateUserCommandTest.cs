@@ -36,7 +36,7 @@ namespace TaskManagement.UnitTest.User.Commands
 
             _userDto = new CreateUserDTO
             {
-                Id = 6,
+                AccountId = "6",
                 Email = "sami@gmail.com",
                 Password = "password",
                 FullName = "Samuel",

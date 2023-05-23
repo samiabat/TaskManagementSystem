@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace TaskManagement.Application.Features.Users.DTOs
 {
-    public class UserDTO: CommenDTO, IUserDto
+    public class UserDTO: CommenDTO
     {
-        public int Id { get; set; }
+        public string Id { get; set; }
 
     }
 }

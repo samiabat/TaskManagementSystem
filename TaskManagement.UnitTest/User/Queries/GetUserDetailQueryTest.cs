@@ -36,7 +36,7 @@ namespace TaskManagement.UnitTest.User.Queries
             var handler = new GetUserDetailQueryHandler(_mapper, _mockRepo.Object);
             var result = await handler.Handle(new GetUserDetailQuery { Id = Id }, CancellationToken.None);
             result.ShouldBeOfType<UserDTO>();
-            result.Id.ShouldBe(Id);
+            result.Id.ShouldBe(Id.ToString());
 
         }
         [Fact]

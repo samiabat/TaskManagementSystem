@@ -41,7 +41,7 @@ namespace TaskManagement.UnitTest.User.Commands
         }
 
         [Fact]
-        public async System.Threading.Tasks.Task CreateUserTest()
+        public async System.Threading.Tasks.Task DeleteUserTest()
         {
             var handler = new DeleteUserCommandHandler(_mockRepo.Object, _mapper);
 

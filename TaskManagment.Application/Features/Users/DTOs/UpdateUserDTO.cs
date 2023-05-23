@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TaskManagement.Application.Features.Users.DTOs
 {
-    public class UpdateUserDTO: CommenDTO, IUserDto
+    public class UpdateUserDTO: CommenDTO
     {
         public int Id { get; set; }
 

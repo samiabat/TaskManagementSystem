@@ -6,6 +6,8 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
+// using MediatR.Extensions.DependencyInjection;
+
 namespace TaskManagement.Application
 {
     public static class ApplicationServicesRegistration
@@ -13,7 +15,9 @@ namespace TaskManagement.Application
         public static IServiceCollection ConfigureApplicationServices(this IServiceCollection services)
         {
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
-            services.AddMediatR((cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly())));
+            services.AddMediatR(cfg=>{
+                cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly());
+            }); 
             return services;
         }
     }
